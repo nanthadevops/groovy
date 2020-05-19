@@ -12,6 +12,11 @@ pipeline {
                 echo 'Hello Nantha from world!' 
             }
          }
+         stage('Stage 3') {
+            steps {
+                echo 'Art of being earnest ~ OW!' 
+            }
+         }
         }
     }
 
