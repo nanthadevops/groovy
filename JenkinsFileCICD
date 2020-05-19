@@ -1,7 +1,9 @@
 #!/usr/bin/env groovy
 pipeline {
     agent any
-
+    environment { 
+        CC = 'Nantha'
+    }
     stages {
         stage('Build') {
             steps {
@@ -21,12 +23,7 @@ pipeline {
         stage('DeployProd') {
             steps {
                 echo 'Deploying to production....'
-                def sqs ='Hello'
-                def dqs = "Nantha!"
-                
-                def username = "rb"
-                echo '${sqs} ${dqs}'
-                echo "I said , Hello Mr.${username}"
+                sh 'printenv'
             }
         }
     }
