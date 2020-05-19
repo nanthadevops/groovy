@@ -3,6 +3,7 @@ pipeline {
     agent any
     environment { 
         CC = 'Nantha'
+        CCpass = credentials('testuser')
     }
     stages {
         stage('Build') {
